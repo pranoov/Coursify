@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Login</title>
+  <link href="login.css" rel="stylesheet" type="text/css" />
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDYhX9pPN2316VUXgIcb3-3VNq_tvw9iew",
+    authDomain: "highschoolcourseselectio-f5116.firebaseapp.com",
+    projectId: "highschoolcourseselectio-f5116",
+    storageBucket: "highschoolcourseselectio-f5116.appspot.com",
+    messagingSenderId: "378004512804",
+    appId: "1:378004512804:web:a4cadfad910f2dc64f38b1",
+    measurementId: "G-MB588R7WH4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <a href="index.html">
+    Home
+  </a>
+  <div class="container">
+  <div>
+    <h1>Coursify!</h1>
+  </div>
+  <div>
+    <h2>Log In</h2>
+  </div>
+  <div>
+    <label class="hidden" id="errorLabel"> The username or password entered is incorrect</label>
+  </div>
+  <div>
+    <div>
+    <input placeholder="Username" id="nameLogin"/>
+    </div>
+    <div>
+    <input type="password" placeholder="Password" id="passwordLogin"/>
+    </div>
+    <div>
+    <Button onclick="LoginCheck()" class="button">Submit</Button>
+    </div>
+  </div>
+  </div>
+ 
+</body>
+</html>

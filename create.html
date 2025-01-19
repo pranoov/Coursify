@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Create</title>
+  <link href="create.css" rel="stylesheet" type="text/css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDYhX9pPN2316VUXgIcb3-3VNq_tvw9iew",
+    authDomain: "highschoolcourseselectio-f5116.firebaseapp.com",
+    projectId: "highschoolcourseselectio-f5116",
+    storageBucket: "highschoolcourseselectio-f5116.appspot.com",
+    messagingSenderId: "378004512804",
+    appId: "1:378004512804:web:a4cadfad910f2dc64f38b1",
+    measurementId: "G-MB588R7WH4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Patua+One&display=swap" rel="stylesheet">
+</head>
+
+<body onload="setQuestions()">
+  <script src="script.js"></script>
+
+
+  <div class="questionContainer">
+  <div class="questionCard">
+    
+    <div>
+      <h1 id="questionTitle" class="questionTitle"></h1>
+      <h3 id="halfUnitText">Please choose another 1/2 unit course, as the course choosen is only 1/2 unit.</h3>
+      <div id="selection">
+      <input class="inputBox" id="questionInput" class="Input"></input>
+      <div id="yearButtons">
+          <button id="freshmanButton" class="button2" onclick="buttonClick(id)">Freshman</Button>
+          <button id="sophomoreButton"class="button2" onclick="buttonClick(id)">Sophomore</button>
+          <button id="juniorButton" class="button2"onclick="buttonClick(id)">Junior</button>
+          <button id="seniorButton" class="button2"onclick="buttonClick(id)">Senior</button>
+        </div>
+        <select id="careerSelect"></select>
+        <select id="englishSelect"></select>
+        <select id="mathSelect"></select>
+        <select id="scienceSelect"></select>
+        <select id="socialstudiesSelect"></select>
+        <select id="wellnessSelect"></select>
+        <select id="electiveSelect"></select>
+        <select id="electiveSelect2"></select>
+        <select id="electiveSelect3"></select>
+        <select id="electiveSelect4"></select>
+        <div id="extraInputs">
+          <h2>Enter your Freshman courses, if some are not applicable, leave them blank.</h2>
+          <input id="mathInput" class="input1" placeholder="Enter Math Course"></input>
+          <input id="englishInput" class="input1" placeholder="Enter English Course"></input>
+          <input id="scienceInput" class="input1" placeholder="Enter Science Course"></input>
+          <input id="socialstudiesInput" class="input1" placeholder="Enter Social Studies Course"></input>
+          <input id="wellnessInput" class="input1" placeholder="Enter Wellness Course"></input>
+          <input id="elective1Input" class="input1" placeholder="Enter 1st Elective"></input>
+          <input id="elective2Input" class="input1" placeholder="Enter 2nd Elective"></input>
+        </div>
+      </div>
+      <div class="emptySpace"></div>
+      <div>
+        <h2 id="questionNumberText"></h2>
+        <Button id="questionBackButton" onclick="backQuestion()" class="button">Back</Button>
+        <Button id="questionNextButton" onclick="nextQuestion()" class="button">Next</Button>
+        <Button id="questionSkipButton" onclick="skipQuestion()" class="button">Skip</Button>
+        <button id="learnMore" onclick="popup()" class="button">Learn More</button>
+        <Button id="questionDoneButton" onclick="finishQuestion()" class="button">Done</Button>
+      </div>
+      <div id="popup1" class="overlay">
+	<div class="popup">
+		<h2 id="infoTitle"></h2>
+		<a class="close" href="#">&times;</a>
+    <h4>Students in this accelerated course are introduced to a
+variety of literary elements in different types of literature.
+Creativity is developed through class study of literature and
+independent study. The composition program includes
+experience in both creative and critical writing. The basic
+principles of the fine arts are introduced and integrated into
+the language arts curriculum. (NCAA Core Course)</h4>
+		<h4 id="infoLevel"></h4>
+		</div>
+	</div>
+</div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>

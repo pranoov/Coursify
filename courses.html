@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link href="courses.css" rel="stylesheet" type="text/css" />
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Patua+One&display=swap" rel="stylesheet">
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDYhX9pPN2316VUXgIcb3-3VNq_tvw9iew",
+    authDomain: "highschoolcourseselectio-f5116.firebaseapp.com",
+    projectId: "highschoolcourseselectio-f5116",
+    storageBucket: "highschoolcourseselectio-f5116.appspot.com",
+    messagingSenderId: "378004512804",
+    appId: "1:378004512804:web:a4cadfad910f2dc64f38b1",
+    measurementId: "G-MB588R7WH4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+</head>
+<body onload="setCourses()">
+ <script src="script.js"></script>
+<div class="container">
+  <h1 id="coursesTitle" class="courseTitle"></h1>
+<table id="freshmanTable">
+  <tr>
+    <th>Course Names</th>
+    <th>Courses</th>
+  </tr>
+<tr>
+    <th id="englishText">English</th>
+    <th id="englishClass"></th>
+  </tr>
+  <tr>
+    <th id="mathText">Mathematics</th>
+    <th id="mathClass"></th>
+  </tr>
+  <tr>
+    <th id="scienceText">Science</th>
+    <th id="scienceClass"></th>
+  </tr>
+  <tr>
+    <th>Social Studies</th>
+    <th id="socialstudiesClass">None</th>
+  </tr>
+  <tr>
+    <th>Wellness</th>
+    <th id="wellnessClass">None</th>
+  </tr>
+  <tr>
+    <th>Elective 1</th>
+    <th id="elective1Class">None</th>
+  </tr>
+  <tr>
+    <th>Elective 2</th>
+    <th id="elective2Class">None</th>
+  </tr>
+  <tr>
+    <th>Summer Course</th>
+    <th id="summerClass">None</th>
+  </tr>
+</table>
+<table id="sophomoreTable">
+  <tr>
+    <th>Course Names</th>
+    <th>Courses</th>
+  </tr>
+<tr>
+    <th>English</th>
+    <th id="sophomoreEnglishClass"></th>
+  </tr>
+  <tr>
+    <th>Mathematics</th>
+    <th id="sophomoreMathClass"></th>
+  </tr>
+  <tr>
+    <th>Science</th>
+    <th id="sophomoreScienceClass">None </th>
+  </tr>
+  <tr>
+    <th>Social Studies</th>
+    <th id="sophomoreSocialstudiesClass">None</th>
+  </tr>
+  <tr>
+    <th>Wellness</th>
+    <th id="sophomoreWellnessClass">None</th>
+  </tr>
+  <tr>
+    <th>Elective 1</th>
+    <th id="sophomoreElective1Class">None</th>
+  </tr>
+  <tr>
+    <th>Elective 2</th>
+    <th id="sophomoreElective2Class">None</th>
+  </tr>
+   <tr>
+    <th>Summer Course</th>
+    <th id="sophomoreSummerClass">None</th>
+  </tr>
+</table>
+<table id="juniorTable">
+  <tr>
+    <th>Course Names</th>
+    <th>Courses</th>
+  </tr>
+<tr>
+    <th>English</th>
+    <th id="juniorEnglishClass"></th>
+  </tr>
+  <tr>
+    <th>Mathematics</th>
+    <th id="juniorMathClass"></th>
+  </tr>
+  <tr>
+    <th>Science</th>
+    <th id="juniorScienceClass"></th>
+  </tr>
+  <tr>
+    <th>Social Studies</th>
+    <th id="juniorSocialstudiesClass">None</th>
+  </tr>
+  <tr>
+    <th>Wellness</th>
+    <th id="juniorWellnessClass">None</th>
+  </tr>
+  <tr>
+    <th>Elective 1</th>
+    <th id="juniorElective1Class">None</th>
+  </tr>
+  <tr>
+    <th>Elective 2</th>
+    <th id="juniorElective2Class">None</th>
+  </tr>
+  <tr>
+    <th>Summer Course</th>
+    <th id="sophomoreSummerClass">None</th>
+  </tr>
+</table>
+<table id="seniorTable">
+  <tr>
+    <th>Course Names</th>
+    <th>Courses</th>
+  </tr>
+<tr>
+    <th>English</th>
+    <th id="seniorEnglishClass"></th>
+  </tr>
+  <tr>
+    <th>Mathematics</th>
+    <th id="seniorMathClass"></th>
+  </tr>
+  <tr>
+    <th>Science</th>
+    <th id="seniorScienceClass"></th>
+  </tr>
+  <tr>
+    <th>Social Studies</th>
+    <th id="seniorSocialstudiesClass">None</th>
+  </tr>
+  <tr>
+    <th>Wellness</th>
+    <th id="seniorWellnessClass">None</th>
+  </tr>
+  <tr>
+    <th>Elective 1</th>
+    <th id="seniorElective1Class">None</th>
+  </tr>
+  <tr>
+    <th>Elective 2</th>
+    <th id="seniorElective2Class">None</th>
+  </tr>
+  <tr>
+    <th>Summer Course</th>
+    <th id="sophomoreSummerClass">None</th>
+  </tr>
+</table>
+</div>
+  <div class="container">
+<button onclick="courseBack()" class="button">Back</button>
+  <button onclick="courseNext()" class="button">Next</button>
+  </div>
+</body>
+</html>
+

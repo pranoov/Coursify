@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dashboard</title>
+  <link href="dashboard.css" rel="stylesheet" type="text/css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDYhX9pPN2316VUXgIcb3-3VNq_tvw9iew",
+    authDomain: "highschoolcourseselectio-f5116.firebaseapp.com",
+    projectId: "highschoolcourseselectio-f5116",
+    storageBucket: "highschoolcourseselectio-f5116.appspot.com",
+    messagingSenderId: "378004512804",
+    appId: "1:378004512804:web:a4cadfad910f2dc64f38b1",
+    measurementId: "G-MB588R7WH4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Patua+One&display=swap" rel="stylesheet">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="set()">
+  <script src="script.js"></script>
+  
+  <div class="navBar">
+    <ul>
+      <li><a href="dashboard.html">Home</a></li>
+      <li><a href="courses.html">My Courses</a></li>
+      <li><a href="login.html">About</a></li>
+
+      <Button class="barButton" id="accountButton"><i class="fa fa-user" id="accountLabel"></i></Button>
+    </ul>
+  </div>
+  <div class="titleBox">
+  <label class="dashboardTitle" id="label1"></label>
+  </div>
+  <div class="card">
+    <h2 id="cardTitle" class="cardTitle"><b></b></h2>
+    <h4 id="cardInfo" class="cardTitle"></h4>
+    <div class="container">
+    <Button id="startButton" onclick="updateInfo()" class="cardButton">Start!</Button>
+    </div>
+  </div>
+</body>
+</html>
+

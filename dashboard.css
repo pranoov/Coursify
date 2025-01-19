@@ -1,0 +1,111 @@
+.html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+.navBar{
+  margin: 0 auto;
+  background: #1a494d;
+}
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  overflow: hidden;
+  background-color: #1a494d;
+}
+
+li {
+  float: left;
+}
+
+.barButton {
+  float: right;
+  padding: 12px 12px;
+  border-radius: 14px;
+  backgroun-color: #ffffff;
+}
+
+li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #133639;
+}
+
+.titleBox{
+  margin: auto;
+  width: 80%;  
+  padding: 30px 30px;
+}
+
+.dashboardTitle{
+  font-family: 'Patua One', cursive;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.cardTitle{
+  font-family: 'Montserrat';
+}
+
+.card{
+  background: #ebd805;
+  margin: auto;
+  width: 80%;
+  padding: 7px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.container{
+  text-align:center
+}
+
+.cardButton{
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 50%;
+}
+.cardButton:hover {
+  background: #06b7db;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
