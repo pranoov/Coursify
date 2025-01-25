@@ -1,4 +1,4 @@
-# High School Course Selection System
+# Coursify
 
 ## Overview
 The High School Course Selection System is a web application designed to help students select their courses for high school. The application allows users to create an account, update their information, and manage their course selections based on their current year in school.
